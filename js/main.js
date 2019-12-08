@@ -5,6 +5,7 @@
     * Ajax request to NASA Neo API
     */
 
+
    $(function() {
 
       // set some initial variables

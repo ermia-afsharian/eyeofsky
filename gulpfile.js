@@ -25,18 +25,18 @@ gulp.task('sass', function() {
          browsers: ['last 2 versions']
       }))
       .pipe(cssnano())
-      .pipe(rename(".min.css"))
+      .pipe(rename("style.min.css"))
       .pipe(gulp.dest('./build/css'))
 });
 
 gulp.task('scripts', function(){
    return gulp
-   .src('./js/index.js') // What files do we want gulp to consume?
+   .src('./js/main.js') // What files do we want gulp to consume?
    .pipe(eslint())
    .pipe(eslint.format())
    .pipe(eslint.failAfterError())
    .pipe(terser()) // Call the terser function on these files
-   .pipe(rename( "index.min.js" )) // Rename the uglified file
+   .pipe(rename( "main.min.js" )) // Rename the uglified file
    .pipe(gulp.dest("./build/js")); // Where do we put the result?
 });
 
