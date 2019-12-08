@@ -25,7 +25,7 @@ gulp.task('sass', function() {
          browsers: ['last 2 versions']
       }))
       .pipe(cssnano())
-      .pipe(rename("style.min.css"))
+      .pipe(rename(".min.css"))
       .pipe(gulp.dest('./build/css'))
 });
 
